@@ -89,7 +89,6 @@ nav{
   padding:140px 40px 80px;text-align:center;position:relative;overflow:hidden;
 }
 
-/* Animated grid bg */
 .hero-grid{
   position:absolute;inset:0;
   background-image:
@@ -100,7 +99,6 @@ nav{
 }
 @keyframes gridMove{from{background-position:0 0}to{background-position:48px 48px}}
 
-/* Radial glow */
 .hero-glow{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
   width:700px;height:700px;
@@ -137,7 +135,7 @@ nav{
   margin-top:24px;animation:fadeUp .7s ease .35s both;
 }
 
-/* LIVE TIMER */
+/* TIMER */
 .timer-wrap{
   margin-top:48px;animation:fadeUp .7s ease .5s both;
 }
@@ -264,10 +262,8 @@ section{position:relative;z-index:1}
   display:flex;align-items:center;justify-content:center;
 }
 .j-photo img{width:100%;height:100%;object-fit:cover}
-.j-initials{font-family:var(--font-display);font-size:20px;font-weight:900;color:var(--green)}
 .j-name{font-family:var(--font-display);font-size:13px;font-weight:700;color:var(--white);margin-bottom:5px;line-height:1.3}
 .j-title{font-family:var(--font-mono);font-size:9px;color:var(--green);margin-bottom:3px;letter-spacing:.06em}
-.j-org{font-family:var(--font-mono);font-size:9px;color:var(--dim);line-height:1.4}
 .j-badge{
   display:inline-block;margin-top:10px;
   font-family:var(--font-mono);font-size:8px;letter-spacing:.1em;
@@ -275,78 +271,6 @@ section{position:relative;z-index:1}
 }
 .j-industry{border-color:var(--green);color:var(--green)}
 .j-academia{border-color:var(--dim);color:var(--dim)}
-
-/* TIMELINE */
-.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
-.tl-card{
-  background:var(--bg2);border:1px solid var(--dim2);
-  padding:28px 22px;position:relative;overflow:hidden;
-}
-.tl-card.done{border-color:rgba(0,255,106,0.25);background:rgba(0,255,106,0.03)}
-.tl-card.active{border-color:var(--green);animation:glow .8s ease-in-out infinite alternate}
-@keyframes glow{from{box-shadow:0 0 0 rgba(0,255,106,0)}to{box-shadow:0 0 18px rgba(0,255,106,0.15)}}
-.tl-status{font-family:var(--font-mono);font-size:9px;letter-spacing:.15em;margin-bottom:10px;text-transform:uppercase}
-.done .tl-status{color:var(--dim)}
-.active .tl-status{color:var(--green)}
-.pending .tl-status{color:var(--dim)}
-.tl-time{font-family:var(--font-display);font-size:28px;font-weight:700;color:var(--white);margin-bottom:4px}
-.active .tl-time{color:var(--green)}
-.tl-event{font-size:13px;color:var(--dim);margin-bottom:4px}
-.tl-dot{
-  position:absolute;top:24px;right:24px;
-  width:10px;height:10px;border-radius:50%;
-}
-.done .tl-dot{background:var(--dim)}
-.active .tl-dot{background:var(--green);animation:blink .8s infinite}
-.pending .tl-dot{border:1px solid var(--dim)}
-
-/* HOW TO */
-.how-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
-.how-steps{display:flex;flex-direction:column;gap:3px}
-.how-step{
-  display:flex;align-items:flex-start;gap:16px;
-  background:var(--bg2);border:1px solid var(--dim2);
-  padding:18px 20px;transition:border-color .3s;
-}
-.how-step:hover{border-color:var(--green)}
-.step-num{
-  font-family:var(--font-mono);font-size:11px;color:var(--bg);
-  background:var(--green);width:24px;height:24px;border-radius:50%;
-  display:flex;align-items:center;justify-content:center;flex-shrink:0;font-weight:bold;
-}
-.step-title{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--white);margin-bottom:3px}
-.step-desc{font-size:11.5px;color:var(--dim);line-height:1.6}
-
-.how-code{
-  background:var(--bg2);border:1px solid var(--border);
-  padding:24px;font-family:var(--font-mono);font-size:11px;
-  line-height:2;color:var(--dim);
-}
-.code-comment{color:rgba(0,255,106,0.4)}
-.code-kw{color:var(--green)}
-.code-str{color:var(--gold)}
-.code-title{
-  font-family:var(--font-mono);font-size:9px;letter-spacing:.15em;
-  color:var(--dim);text-transform:uppercase;margin-bottom:14px;
-  border-bottom:1px solid var(--dim2);padding-bottom:10px;
-}
-
-/* REGISTER CTA */
-.cta-section{
-  text-align:center;padding:120px 40px;
-  border-top:1px solid var(--border);
-  background:radial-gradient(ellipse 60% 50% at 50% 0%,rgba(0,255,106,0.04),transparent);
-}
-.cta-pre{font-family:var(--font-mono);font-size:10px;letter-spacing:.25em;color:var(--green);margin-bottom:20px;text-transform:uppercase}
-.cta-title{font-family:var(--font-display);font-size:clamp(56px,9vw,120px);font-weight:900;line-height:.9;color:var(--white);margin-bottom:32px}
-.cta-title span{color:var(--green)}
-.cta-fee{
-  display:inline-flex;align-items:center;gap:20px;
-  border:1px solid var(--border);padding:14px 32px;margin-bottom:36px;
-}
-.fee-label{font-family:var(--font-mono);font-size:9px;letter-spacing:.2em;color:var(--dim);text-transform:uppercase}
-.fee-val{font-family:var(--font-display);font-size:40px;font-weight:900;color:var(--gold)}
-.cta-note{font-family:var(--font-mono);font-size:10px;color:var(--dim);margin-bottom:40px;letter-spacing:.08em}
 
 /* FOOTER */
 footer{
@@ -366,15 +290,14 @@ footer{
 /* ANIMS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
 @keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
-@keyframes fadeIn{from{opacity:0}to{opacity:1}}
 
 /* PARTICLE CANVAS */
 #particles{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.35}
 
 @media(max-width:900px){
   .status-bar{padding:0 16px}.nav-links{display:none}nav{padding:12px 16px}
-  .hero{padding:130px 20px 60px}.timer-block{min-width:60px;padding:10px 14px}.timer-num{font-size:30px}
-  .ch-grid,.prize-grid,.judges-grid,.globe-grid,.how-grid,.timeline-grid{grid-template-columns:1fr}
+  .hero{padding:130px 20px 60px}
+  .ch-grid,.prize-grid,.judges-grid,.globe-grid{grid-template-columns:1fr}
   .s-wrap{padding:60px 20px}footer{flex-direction:column;gap:12px;text-align:center}
 }
 </style>
@@ -393,7 +316,6 @@ footer{
     <div class="status-item">SUBMISSIONS: <span id="sub-count">OPEN</span></div>
   </div>
   <div class="status-right">
-    <div class="status-item">PARTICIPANTS: <span>GLOBAL</span></div>
     <div class="clock-live" id="live-clock">--:--:-- IST</div>
   </div>
 </div>
@@ -412,18 +334,17 @@ footer{
 <section class="hero">
   <div class="hero-grid"></div>
   <div class="hero-glow"></div>
-
-  <div class="hero-tag">Global NLP Datathon · Inaugural Edition</div>
+  <div class="hero-tag">Global NLP Datathon · Live Now</div>
 
   <h1 class="hero-title">
     NEURO<span class="v">LOGIC</span>
     <span class="edition">VERSION 1.0</span>
   </h1>
 
-  <p class="hero-sub">Build the future of language AI. 12 hours. 3 challenges. Zero boundaries.<br>Hosted by GGITS — Dept. of CSE-AIML, Jabalpur.</p>
+  <p class="hero-sub">The hacking has begun. You have 12 hours to build, refine, and submit your NLP solutions. Build the future of language AI.</p>
 
   <div class="timer-wrap">
-    <div class="timer-label" id="timer-label">HACKATHON STARTS IN</div>
+    <div class="timer-label" id="timer-label">SUBMISSION ENDS IN</div>
     <div class="timer">
       <div class="timer-block"><div class="timer-num" id="t-hr">00</div><div class="timer-unit">Hours</div></div>
       <div class="timer-sep">:</div>
@@ -434,180 +355,138 @@ footer{
   </div>
 
   <div class="hero-cta-row">
-    <a href="https://neurologic26.devpost.com/register" class="btn-primary" target="_blank">Join on Devpost</a>
-    <a href="#challenges" class="btn-outline">View Challenges</a>
+    <a href="https://neurologic26.devpost.com" class="btn-primary" target="_blank">Submit on Devpost</a>
+    <a href="#challenges" class="btn-outline">View Track Details</a>
   </div>
 </section>
 
 <div class="ticker">
   <div class="ticker-inner">
-    <span class="t-item">NeuroLogic 1.0 — COMING TOMORROW</span>
-    <span class="t-item">April 25, 2026 · 10 AM – 10 PM IST</span>
-    <span class="t-item">3 NLP Challenges</span>
-    <span class="t-item">$1,250+ in Prizes</span>
-    <span class="t-item">FREE to Participate</span>
-    <span class="t-item">Certificate for ALL</span>
-    <span class="t-item">Participants from USA · Italy · Canada · Pakistan · Bangladesh · India</span>
+    <span class="t-item">NeuroLogic 1.0 — HACKING IN PROGRESS</span>
+    <span class="t-item">SUBMISSION DEADLINE: 10:00 PM IST TONIGHT</span>
+    <span class="t-item">Join 8+ Countries in the NLP Datathon</span>
     <span class="t-item">Powered by GGITS AIML Dept</span>
-    <span class="t-item">neurologic26.devpost.com</span>
-    <span class="t-item">NeuroLogic 1.0 — COMING TOMORROW</span>
-    <span class="t-item">April 25, 2026 · 10 AM – 10 PM IST</span>
-    <span class="t-item">3 NLP Challenges</span>
-    <span class="t-item">$1,250+ in Prizes</span>
-    <span class="t-item">FREE to Participate</span>
-    <span class="t-item">Certificate for ALL</span>
-    <span class="t-item">Participants from USA · Italy · Canada · Pakistan · Bangladesh · India</span>
-    <span class="t-item">Powered by GGITS AIML Dept</span>
-    <span class="t-item">neurologic26.devpost.com</span>
+    <span class="t-item">NeuroLogic 1.0 — HACKING IN PROGRESS</span>
+    <span class="t-item">SUBMISSION DEADLINE: 10:00 PM IST TONIGHT</span>
   </div>
 </div>
 
 <section id="challenges">
 <div class="s-wrap">
-  <div class="s-head reveal"><span class="s-num">01</span><div class="s-dash"></div><span class="s-label">NLP Challenge Tracks</span></div>
-  <div class="sec-title reveal">Pick Your <em>Challenge</em></div>
-  <p class="reveal" style="font-size:13px;color:var(--dim);margin-bottom:40px;max-width:520px">Choose one track. Build your model. Submit before 10 PM IST. You may only attempt ONE challenge.</p>
+  <div class="s-head reveal"><span class="s-num">01</span><div class="s-dash"></div><span class="s-label">Active Tracks</span></div>
+  <div class="sec-title reveal">The <em>Challenges</em></div>
   <div class="ch-grid">
     <div class="ch-card c1 reveal">
-      <div class="ch-badge">Challenge 01 · Beginner–Intermediate</div>
-      <div class="ch-num">C1</div>
-      <div class="ch-name">Real-Time Disaster Tweet Classification</div>
-      <p class="ch-desc">Build a binary classification model that identifies whether a tweet refers to a real disaster or not. Enables first responders to prioritise critical situations at scale.</p>
-      <span class="ch-metric">METRIC: MACRO F1-SCORE</span>
-      <span class="ch-level">Dataset → train.csv + test_nolabel.csv · Kaggle: NLP with Disaster Tweets</span>
+      <div class="ch-badge">C1 · Beginner</div>
+      <div class="ch-num">01</div>
+      <div class="ch-name">Disaster Tweet Classification</div>
+      <p class="ch-desc">Classify which Tweets are about real disasters and which one’s aren’t.</p>
+      <span class="ch-metric">METRIC: F1-SCORE</span>
     </div>
     <div class="ch-card c2 reveal rd1">
-      <div class="ch-badge">Challenge 02 · Intermediate</div>
-      <div class="ch-num">C2</div>
-      <div class="ch-name">Fake News & Misinformation Detection</div>
-      <p class="ch-desc">Develop a robust NLP model to classify news articles as real or fake based on title and content. Combat the spread of misinformation at scale with AI.</p>
-      <span class="ch-metric">METRIC: OVERALL ACCURACY (%)</span>
-      <span class="ch-level">Dataset → challenge2_train.csv + challenge2_test_nolabel.csv</span>
+      <div class="ch-badge">C2 · Intermediate</div>
+      <div class="ch-num">02</div>
+      <div class="ch-name">Fake News Detection</div>
+      <p class="ch-desc">Identify misinformation using title and text content with high precision.</p>
+      <span class="ch-metric">METRIC: ACCURACY</span>
     </div>
     <div class="ch-card c3 reveal rd2">
-      <div class="ch-badge">Challenge 03 · Advanced</div>
-      <div class="ch-num">C3</div>
-      <div class="ch-name">Multilingual Toxic Comment Classification</div>
-      <p class="ch-desc">Build a multi-label classifier identifying toxicity across multilingual text — threats, obscenity, insults, and identity-based hate across global platforms.</p>
-      <span class="ch-metric">METRIC: MEAN ROC-AUC SCORE</span>
-      <span class="ch-level">Dataset → Jigsaw Multilingual Toxic Comment · 6+ Languages</span>
+      <div class="ch-badge">C3 · Advanced</div>
+      <div class="ch-num">03</div>
+      <div class="ch-name">Multilingual Toxic Comments</div>
+      <p class="ch-desc">Identify toxicity across 6+ different languages in various online platforms.</p>
+      <span class="ch-metric">METRIC: ROC-AUC</span>
     </div>
   </div>
 </div>
 </section>
 
-<section id="reach" style="border-top:1px solid var(--border)">
+<section id="reach">
 <div class="s-wrap">
-  <div class="s-head reveal"><span class="s-num">02</span><div class="s-dash"></div><span class="s-label">Global Reach</span></div>
-  <div class="sec-title reveal">Participants from <em>8 Countries & Cities</em></div>
+  <div class="s-head reveal"><span class="s-num">02</span><div class="s-dash"></div><span class="s-label">Global Participation</span></div>
+  <div class="sec-title reveal">Our <em>Reach</em></div>
   <div class="globe-grid">
-    <div class="globe-card reveal"><span class="globe-flag">🇺🇸</span><div class="globe-name">United States</div><div class="globe-region">USA</div></div>
-    <div class="globe-card reveal rd1"><span class="globe-flag">🇮🇹</span><div class="globe-name">Italy</div><div class="globe-region">EUROPE</div></div>
-    <div class="globe-card reveal rd2"><span class="globe-flag">🇨🇦</span><div class="globe-name">Canada</div><div class="globe-region">NORTH AMERICA</div></div>
-    <div class="globe-card reveal rd3"><span class="globe-flag">🇵🇰</span><div class="globe-name">Pakistan</div><div class="globe-region">SOUTH ASIA</div></div>
-    <div class="globe-card reveal"><span class="globe-flag">🇧🇩</span><div class="globe-name">Bangladesh</div><div class="globe-region">SOUTH ASIA</div></div>
-    <div class="globe-card reveal rd1"><span class="globe-flag">🇮🇳</span><div class="globe-name">Coimbatore</div><div class="globe-region">TAMIL NADU · INDIA</div></div>
-    <div class="globe-card reveal rd2"><span class="globe-flag">🇮🇳</span><div class="globe-name">New Delhi</div><div class="globe-region">DELHI · INDIA</div></div>
-    <div class="globe-card reveal rd3"><span class="globe-flag">🇮🇳</span><div class="globe-name">Jabalpur</div><div class="globe-region">MADHYA PRADESH · INDIA</div></div>
+    <div class="globe-card reveal"><span class="globe-flag">🇺🇸</span><div class="globe-name">USA</div></div>
+    <div class="globe-card reveal rd1"><span class="globe-flag">🇮🇹</span><div class="globe-name">Italy</div></div>
+    <div class="globe-card reveal rd2"><span class="globe-flag">🇨🇦</span><div class="globe-name">Canada</div></div>
+    <div class="globe-card reveal rd3"><span class="globe-flag">🇮🇳</span><div class="globe-name">India</div></div>
   </div>
 </div>
 </section>
 
-<section id="prizes" style="border-top:1px solid var(--border)">
+<section id="prizes">
 <div class="s-wrap">
-  <div class="s-head reveal"><span class="s-num">03</span><div class="s-dash"></div><span class="s-label">Prizes</span></div>
-  <div class="sec-title reveal">What's <em>at Stake</em></div>
-  <div class="prize-grid" style="margin-top:40px">
+  <div class="s-head reveal"><span class="s-num">03</span><div class="s-dash"></div><span class="s-label">Rewards</span></div>
+  <div class="sec-title reveal">Total <em>Prize Pool</em></div>
+  <div class="prize-grid">
     <div class="prize-card p1 reveal">
-      <div class="prize-rank-label">Grand Champion</div>
+      <div class="prize-rank-label">WINNER</div>
       <span class="prize-icon">🥇</span>
       <div class="prize-amt">$819</div>
-      <div class="prize-tag">Total Prize Value</div>
-      <div class="prize-items">
-        <div class="pi">AWS Skill Builder Annual<span>$449</span></div>
-        <div class="pi">Oracle Cloud Credits<span>$300</span></div>
-        <div class="pi">Microsoft 365 Personal<span>$70</span></div>
-        <div class="pi">Certificate of Achievement<span>🎓</span></div>
-      </div>
+      <div class="prize-tag">Total Bundle Value</div>
     </div>
     <div class="prize-card p2 reveal rd1">
-      <div class="prize-rank-label">First Runner-Up</div>
+      <div class="prize-rank-label">RUNNER UP</div>
       <span class="prize-icon">🥈</span>
       <div class="prize-amt">$519</div>
-      <div class="prize-tag">Total Prize Value</div>
-      <div class="prize-items">
-        <div class="pi">AWS Skill Builder Annual<span>$449</span></div>
-        <div class="pi">Microsoft 365 Personal<span>$70</span></div>
-        <div class="pi">Certificate of Achievement<span>🎓</span></div>
-      </div>
+      <div class="prize-tag">Total Bundle Value</div>
     </div>
     <div class="prize-card p3 reveal rd2">
-      <div class="prize-rank-label">Second Runner-Up</div>
+      <div class="prize-rank-label">THIRD PLACE</div>
       <span class="prize-icon">🥉</span>
       <div class="prize-amt">$70</div>
-      <div class="prize-tag">Total Prize Value</div>
-      <div class="prize-items">
-        <div class="pi">Microsoft 365 Personal<span>$70</span></div>
-        <div class="pi">Certificate of Achievement<span>🎓</span></div>
-      </div>
+      <div class="prize-tag">Total Bundle Value</div>
     </div>
   </div>
 </div>
 </section>
 
-<section id="judges" style="border-top:1px solid var(--border)">
+<section id="judges">
 <div class="s-wrap">
-  <div class="s-head reveal"><span class="s-num">04</span><div class="s-dash"></div><span class="s-label">Judging Panel</span></div>
+  <div class="s-head reveal"><span class="s-num">04</span><div class="s-dash"></div><span class="s-label">Evaluation</span></div>
   <div class="sec-title reveal">Meet the <em>Judges</em></div>
-  <div class="judges-grid" style="margin-top:40px">
-    
+  <div class="judges-grid">
     <div class="judge-card reveal">
-      <div class="j-photo"><img src="ravi.jpg" alt="Ravi"></div>
+      <div class="j-photo"><img src="ravi.jpeg" alt="Ravi"></div>
       <div class="j-name">Ravi</div>
       <div class="j-title">Lead Judge</div>
       <div class="j-badge j-industry">Industry</div>
     </div>
-
     <div class="judge-card reveal rd1">
-      <div class="j-photo"><img src="advit.jpg" alt="Advit"></div>
+      <div class="j-photo"><img src="advit.jpeg" alt="Advit"></div>
       <div class="j-name">Advit</div>
-      <div class="j-title">Technical Expert</div>
+      <div class="j-title">AI Research</div>
       <div class="j-badge j-industry">Industry</div>
     </div>
-
     <div class="judge-card reveal rd2">
-      <div class="j-photo"><img src="sameer.jpg" alt="Sameer"></div>
+      <div class="j-photo"><img src="sameer.jpeg" alt="Sameer"></div>
       <div class="j-name">Sameer</div>
-      <div class="j-title">NLP Specialist</div>
+      <div class="j-title">NLP Expert</div>
       <div class="j-badge j-academia">Academia</div>
     </div>
-
     <div class="judge-card reveal rd3">
-      <div class="j-photo"><img src="sumit.jpg" alt="Sumit"></div>
+      <div class="j-photo"><img src="sumit.jpeg" alt="Sumit"></div>
       <div class="j-name">Sumit</div>
-      <div class="j-title">AI Architect</div>
+      <div class="j-title">Data Architect</div>
       <div class="j-badge j-industry">Industry</div>
     </div>
-
     <div class="judge-card reveal rd4">
-      <div class="j-photo"><img src="siddharth.jpg" alt="Siddharth"></div>
+      <div class="j-photo"><img src="siddharth.jpeg" alt="Siddharth"></div>
       <div class="j-name">Siddharth</div>
-      <div class="j-title">Data Scientist</div>
-      <div class="j-badge j-industry">Industry</div>
+      <div class="j-title">AI Ethics</div>
+      <div class="j-badge j-academia">Academia</div>
     </div>
-
   </div>
 </div>
 </section>
 
 <footer>
   <div class="footer-logo">NEURO<span>LOGIC</span></div>
-  <div>&copy; 2026 GGITS — Department of CSE-AIML. All rights reserved.</div>
-  <div>v1.0.5 - STABLE</div>
+  <div>&copy; 2026 GGITS — Dept of CSE-AIML.</div>
 </footer>
 
 <script>
-// CURSOR
+// CURSOR EFFECT
 const cur = document.getElementById('cur');
 const ring = document.getElementById('curRing');
 window.addEventListener('mousemove', (e)=>{
@@ -615,7 +494,7 @@ window.addEventListener('mousemove', (e)=>{
   ring.style.left = e.clientX+'px'; ring.style.top = e.clientY+'px';
 });
 
-// CLOCK
+// LIVE CLOCK
 function updateClock(){
   const now = new Date();
   document.getElementById('live-clock').innerText = now.toLocaleTimeString('en-GB') + ' IST';
@@ -650,18 +529,19 @@ for(let i=0;i<100;i++) pts.push(new Pt());
 function anim(){ ctx.clearRect(0,0,canvas.width,canvas.height); pts.forEach(p=>p.upd()); requestAnimationFrame(anim); }
 anim();
 
-// TIMER LOGIC: Targeting April 25, 2026, 10:00 AM IST
-const target = new Date("2026-04-25T10:00:00+05:30").getTime();
+// TIMER: Targeting Tonigh 10:00 PM IST
+const target = new Date("2026-04-25T22:00:00+05:30").getTime();
 
 const timerInterval = setInterval(() => {
   const now = new Date().getTime();
   const d = target - now;
 
   if (d < 0) {
-    document.getElementById('timer-label').innerText = "HACKATHON IS LIVE!";
+    document.getElementById('timer-label').innerText = "SUBMISSIONS CLOSED";
     document.getElementById('t-hr').innerText = "00";
     document.getElementById('t-min').innerText = "00";
     document.getElementById('t-sec').innerText = "00";
+    document.getElementById('sub-count').innerText = "CLOSED";
     clearInterval(timerInterval);
     return;
   }
